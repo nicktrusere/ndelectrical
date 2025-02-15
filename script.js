@@ -28,3 +28,40 @@ document.addEventListener('DOMContentLoaded', () => {
         logoImages[currentIndex].style.zIndex = '1';
     });
 });
+
+// Get the elements
+const menuBtn = document.getElementById('menu-btn');
+const infoBtn = document.getElementById('info-btn');
+const searchBtn = document.getElementById('search-btn');
+
+const menuPanel = document.getElementById('menu-panel');
+const infoPanel = document.getElementById('info-panel');
+const searchPanel = document.getElementById('search-panel');
+
+const overlay = document.createElement('div'); // Create overlay dynamically
+overlay.classList.add('overlay');
+document.body.appendChild(overlay);
+
+// Function to show a panel
+function showPanel(panel) {
+  // Hide other panels
+  document.querySelectorAll('.side-panel').forEach((p) => p.classList.remove('active'));
+  // Show the selected panel
+  panel.classList.add('active');
+  // Activate overlay
+  overlay.classList.add('active');
+}
+
+// Function to close all panels
+function closePanels() {
+  document.querySelectorAll('.side-panel').forEach((p) => p.classList.remove('active'));
+  overlay.classList.remove('active');
+}
+
+// Event listeners
+menuBtn.addEventListener('click', () => showPanel(menuPanel));
+infoBtn.addEventListener('click', () => showPanel(infoPanel));
+searchBtn.addEventListener('click', () => showPanel(searchPanel));
+
+// Close panels when clicking outside
+overlay.addEventListener('click', closePanels);
