@@ -17,7 +17,7 @@ body {
 /* Header Styles */
 header {
     background-color: #f16b7f;
-    color: #0d85c5;
+    color: white;
     text-align: center;
     padding: 20px 0;
 }
@@ -52,7 +52,7 @@ form input {
 }
 
 form button {
-    background-color: #032f5e;
+    background-color: #0875e9;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -106,7 +106,7 @@ form button:hover {
     bottom: 0;
     width: 100%;
     padding: 10px 0;
-    background: grey;
+    background: rgb(13, 2, 156);
 }
 
 .footer .social {
@@ -140,5 +140,5 @@ form button:hover {
     margin-top: 20px;
     text-align: center;
     font-size: 20px;
-    color: rgb(2, 2, 56);
+    color: rgb(235, 235, 240);
 }

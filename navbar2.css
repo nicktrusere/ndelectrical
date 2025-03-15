@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+      ),url('images/background.jpeg');
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 /* Navbar styling */
 .navbar {
     position: fixed;
@@ -31,6 +43,7 @@
 .logo img {
     height: 120px; /* Adjust logo height */
     transition: transform 0.3s ease; /* Smooth zoom effect */
+    border-radius: 50%;
 }
 
 .logo:hover img {
@@ -191,7 +204,7 @@
 .slider-container {
   position: relative;
   overflow: hidden;
-  background-color: #f0f0f0; /* or use a background image */
+  background-color: red; /* or use a background image */
  /* Adjust if your fixed navbar is 80px tall */
 }
 
@@ -245,7 +258,7 @@
 .overlay-text h1,
 .overlay-text p {
   margin-bottom: 20px;
-  color: #021967;
+  color: #c0c6db;
   font-size: 50px;
 }
 
@@ -327,13 +340,13 @@
 /*about css*/
 .about-content {
     font-size: 2rem;
-    background-color: #28019e;
+    
     padding: 32px;
     color: rgb(5, 3, 133);
     border: 3px solid rgb(238, 5, 129);
     margin: 1px;
     box-sizing: content-box;
-    background-image: url(image/wire-1.jpg)
+    background-image: url(images/background.jpeg)
 }
 
 .image-gallery {
@@ -505,7 +518,7 @@
     
     .about-content {
       font-size: 3rem;
-      background-color:rgb(196, 220, 224);
+      
       padding: 32px;
       color: rgb(8, 201, 244);
       border: 3px solid rgb(187, 189, 211);
@@ -518,7 +531,7 @@
         overflow-x: auto; /* Enable horizontal scrolling */
         white-space: nowrap; /* Prevent wrapping of items */
         scrollbar-width: thin; /* For Firefox */
-        scrollbar-color: #f33376 #900332; /* For Firefox */
+        scrollbar-color: #f3e033 #e698b2; /* For Firefox */
       }
     
       .horizontal-scroll-container::-webkit-scrollbar {
@@ -633,9 +646,7 @@
         }
       }
       
-  .plans {
-    background: rgb(8, 24, 245);
-    }
+  
 
     .plans-content {
     display: grid;
@@ -644,6 +655,7 @@
     gap: 2.3rem;
     margin-top: 4.2rem;
     color: #1925d6;
+    background-image: url(images/background.jpeg)
     }
 
     .box {
@@ -700,48 +712,72 @@
     transform: translateY(-5px) scale(1.01);
     }
 
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #021967;
-      color: #e90b0b;
-      padding: 20px;
-      flex-wrap: wrap;
-    }
-    .footer-left h3 {
-      margin: 0 0 10px;
-    }
-    .footer-left p {
-      margin: 5px 0;
-    }
-    .footer-left a {
-      color: #fff;
-      text-decoration: underline;
-    }
-    .footer-right .footer-nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 10px;
-      display: flex;
-    }
-    .footer-right .footer-nav li {
-      margin-right: 15px;
-    }
-    .footer-right .footer-nav a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .footer-right .footer-nav a:hover {
-      color: #aaa;
-    }
-    .social-media a {
-      margin-right: 10px;
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .social-media a:hover {
-      color: #aaa;
-    }
+   /* Footer Styling */
+footer {
+  background: #1b1db8;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.footer-left, .footer-nav, .footer-right {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-left .logo {
+  width: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin: 5px 0;
+}
+
+.footer-nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Social Media Links */
+.social-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #f39c12;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
