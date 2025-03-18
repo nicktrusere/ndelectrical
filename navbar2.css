@@ -570,19 +570,19 @@ body {
       .scroll-subtitle {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #ee1212;
+        color: #d40707;
       }
     
       .scroll-description {
-        font-size: 1rem;
-        color: #10025f;
+        font-size: 1 rem;
+        color: #1d115f;
         margin-bottom: 20px;
       }
     
       .scroll-btn {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #007bff;
+        background-color: #04468d;
         color: #fff;
         text-decoration: none;
         border-radius: 5px;
